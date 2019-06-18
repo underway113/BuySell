@@ -14,7 +14,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var timer = Timer()
     
     var historyTransaction:[HistoryTransaction] = []
-    
     var price = 100
     var balance = 1000
     var buyFee = 0.015
@@ -38,9 +37,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         historyTransactionTableView.dataSource = self
         historyTransactionTableView.delegate = self
-        
+
         updateLabel()
         updatePrice()
+        
     }
     
     @IBAction func sellButtonPressed(_ sender: UIButton) {
